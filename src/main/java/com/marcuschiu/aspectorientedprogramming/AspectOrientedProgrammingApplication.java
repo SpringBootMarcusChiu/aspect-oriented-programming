@@ -19,8 +19,9 @@ public class AspectOrientedProgrammingApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String...args) throws Exception {
-		businessService.serve();
-		businessService.serve();
-		businessService.serve();
+		System.out.println();
+		businessService.methodTwo();
+		System.out.println();
+		businessService.methodOne();
 	}
 }
