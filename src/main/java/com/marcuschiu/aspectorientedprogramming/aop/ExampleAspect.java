@@ -3,17 +3,12 @@ package com.marcuschiu.aspectorientedprogramming.aop;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 @Aspect
-@Configuration // or @Component
+@Component // or @Configuration
 public class ExampleAspect {
 
-    /**
-     * execution(* PACKAGE.*.*(..))
-     * Weaving & Weaver
-     * @param jp
-     */
     @Before("execution(* *.methodOne(..))")
     public void before(JoinPoint jp) {
         System.out.println("ExampleAspect.before()");
